@@ -1,0 +1,14 @@
+
+
+version: '3'
+
+services:
+  db_bp_backend:
+    image: mongo:6.0.4
+    restart: always
+    ports:
+      - 37017:27017
+    environment:
+      MONGODB_DATABASE: bp_backend
+    volumes:
+      - ./mongo:/data/db
